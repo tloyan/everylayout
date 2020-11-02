@@ -1,0 +1,15 @@
+.stack {
+  border: var(--border-thin) solid;
+  padding: var(--s1);
+
+  /* filter: invert(100%); */
+}
+
+.stack > * {
+  border: var(--border-thin) solid;
+  padding: var(--s1);
+}
+
+.stack > * + * {
+  margin-top: var(--s1);
+}
