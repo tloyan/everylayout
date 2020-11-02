@@ -1,0 +1,18 @@
+.stack * + * {
+  margin-top: var(--s1);
+}
+
+/*
+  The css below is only purpose for a better visualisation about what's happening.
+  Do not consider this for the logic about components.
+*/
+.stack {
+  border: var(--border-thin) solid;
+  padding: var(--s1);
+  filter: invert(100%);
+}
+
+.stack * {
+  border: var(--border-thin) solid;
+  padding: var(--s1);
+}
