@@ -1,0 +1,22 @@
+.stack_small > * + * {
+  margin-top: var(--s1);
+}
+
+.stack_large > * + * {
+  margin-top: var(--s3);
+}
+
+/*
+  The css below is only purpose for a better visualisation about what's happening.
+  Do not consider this for the logic about components.
+*/
+.stack_large {
+  border: var(--border-thin) solid;
+  padding: var(--s1);
+  filter: invert(100%);
+}
+
+.stack_large * {
+  border: var(--border-thin) solid;
+  padding: var(--s1);
+}

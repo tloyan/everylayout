@@ -6,6 +6,7 @@ import Home from '../routes/home';
 
 import StackNormal from '../routes/stack/normal'
 import StackRecursive from '../routes/stack/recursive';
+import StackNested from '../routes/stack/nested';
 
 const App = () => (
 	<div id="app">
@@ -13,6 +14,7 @@ const App = () => (
 			<Home path="/" />
 			<StackNormal path="/stack/normal" />
 			<StackRecursive path="/stack/recursive" />
+			<StackNested path="/stack/nested" />
 		</Router>
 	</div>
 )
