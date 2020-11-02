@@ -8,6 +8,7 @@ import StackNormal from '../routes/stack/normal'
 import StackRecursive from '../routes/stack/recursive';
 import StackNested from '../routes/stack/nested';
 import StackException from '../routes/stack/exception';
+import StackExceptionWithUtilityClass from '../routes/stack/exceptionwithutilityclass';
 
 const App = () => (
 	<div id="app">
@@ -17,6 +18,7 @@ const App = () => (
 			<StackRecursive path="/stack/recursive" />
 			<StackNested path="/stack/nested" />
 			<StackException path="/stack/exception" />
+			<StackExceptionWithUtilityClass path="/stack/exceptionwithutilityclass" />
 		</Router>
 	</div>
 )
