@@ -1,0 +1,29 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * + * {
+  margin-top: var(--s1);
+}
+
+.stack > :nth-child(2) {
+  margin-bottom: auto;
+}
+
+/*
+  The css below is only purpose for a better visualisation about what's happening.
+  Do not consider this for the logic about components.
+*/
+.stack {
+  min-height: 70vh; /* The container need to be bigger than just all element contained */
+  border: var(--border-thin) solid;
+  padding: var(--s1);
+  filter: invert(100%);
+}
+
+.stack * {
+  border: var(--border-thin) solid;
+  padding: var(--s1);
+}
