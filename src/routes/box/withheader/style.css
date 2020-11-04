@@ -1,0 +1,16 @@
+.boxcontainer {
+  border: var(--border-thin) solid;
+  outline: var(--border-thin) transparent;
+  outline-offset: calc(var(--border-thin) * -1);
+
+  height: 100vh;
+}
+
+.boxheader {
+  padding: var(--s3);
+  filter: invert(100%);
+}
+
+.boxbody {
+  padding: var(--s3);
+}
