@@ -12,10 +12,13 @@ import StackExceptionWithUtilityClass from '../routes/stack/exceptionwithutility
 import StackSplit from '../routes/stack/split';
 import StackOnlyChild from '../routes/stack/onlychild';
 
+import BoxBasic from '../routes/box/basic';
+
 const App = () => (
 	<div id="app">
 		<Router>
 			<Home path="/" />
+
 			<StackNormal path="/stack/normal" />
 			<StackRecursive path="/stack/recursive" />
 			<StackNested path="/stack/nested" />
@@ -23,6 +26,9 @@ const App = () => (
 			<StackExceptionWithUtilityClass path="/stack/exceptionwithutilityclass" />
 			<StackSplit path="/stack/split" />
 			<StackOnlyChild path="/stack/onlychild" />
+
+			<BoxBasic path="/box/basic" />
+
 		</Router>
 	</div>
 )
