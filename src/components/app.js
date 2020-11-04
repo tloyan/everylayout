@@ -13,6 +13,7 @@ import StackSplit from '../routes/stack/split';
 import StackOnlyChild from '../routes/stack/onlychild';
 
 import BoxBasic from '../routes/box/basic';
+import BoxWithinStack from '../routes/box/withinstack';
 
 const App = () => (
 	<div id="app">
@@ -28,6 +29,7 @@ const App = () => (
 			<StackOnlyChild path="/stack/onlychild" />
 
 			<BoxBasic path="/box/basic" />
+			<BoxWithinStack path="/box/withinstack" />
 
 		</Router>
 	</div>

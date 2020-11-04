@@ -1,0 +1,27 @@
+.stack > * + * {
+  margin-top: var(--s1);
+}
+
+/*
+  The css below is only purpose for a better visualisation about what's happening.
+  Do not consider this for the logic about components.
+*/
+.stack {
+  border: var(--border-thin);
+  padding: var(--s1);
+  filter: invert(100%);
+}
+
+.stack * {
+  border: var(--border-thin) solid;
+}
+
+/*
+  The css below is for the box logic
+*/
+.box {
+  padding: var(--s3);
+  border: var(--border-thick) solid;
+  outline: var(--border-thick) transparent;
+  outline-offset: calc(var(--border-thick) * -1);
+}

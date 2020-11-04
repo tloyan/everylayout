@@ -25,6 +25,7 @@
 	--border-thin: var(--s-5);
 	--border-thick: var(--s-2);
 
+	font-family: var(--font-plain);
 	background-color: var(--color-light);
 	color: var(--color-dark);
 }
@@ -34,7 +35,9 @@
 	max-width: var(--measure);
 	line-height: var(--ratio);
 	font-size: calc(.333vw + 1em);
-	font-family: var(--font-plain);
+	font-family: inherit;
+	background-color: inherit;
+	color: inherit;
 }
 
 html, body {
