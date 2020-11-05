@@ -22,6 +22,7 @@ import CenterStackInBox from '../routes/center/stackcenteredinbox';
 
 import ClusterBasic from '../routes/cluster/basic';
 import ClusterList from '../routes/cluster/list';
+import ClusterFirefox from '../routes/cluster/firefox';
 
 const App = () => (
 	<div id="app">
@@ -46,6 +47,7 @@ const App = () => (
 
 			<ClusterBasic path="/cluster/basic" />
 			<ClusterList path="/cluster/list" />
+			<ClusterFirefox path="/cluster/firefox" />
 		</Router>
 	</div>
 )

@@ -1,0 +1,18 @@
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1)
+}
+
+/*
+  Only for better visualisatiion
+*/
+.cluster {
+  border: var(--border-thin) solid;
+  filter: invert(100%);
+}
+
+.cluster > * {
+  border: var(--border-thin) solid;
+  padding: var(--s-1);
+}
