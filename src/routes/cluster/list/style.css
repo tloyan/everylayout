@@ -1,0 +1,36 @@
+.cluster {
+  /* ↓ Set the space as a variable */
+  --space: var(--s1);
+  /* ↓ Suppress horizontal scrolling caused by the negative margin in some circumstances */
+  overflow: hidden;
+}
+
+.cluster > * {
+  display: flex;
+  flex-wrap: wrap;
+  /* ↓ multiply by -1 to negate the halved value */
+  margin: calc(var(--space) / 2 * -1);
+}
+
+.cluster > * > * {
+  /* ↓ half the value, because of the 'doubling up' */
+  margin: calc(var(--space) / 2);
+}
+
+
+/*
+  Only for better visualisatiion
+*/
+.cluster {
+  border: var(--border-thin) solid;
+  filter: invert(100%);
+}
+
+.cluster > * {
+  max-width: 100vw;
+}
+
+.cluster > * > * {
+  border: var(--border-thin) solid;
+  padding: var(--s-1);
+}

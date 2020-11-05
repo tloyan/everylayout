@@ -21,6 +21,7 @@ import CenterIntrinsic from '../routes/center/intrinsic';
 import CenterStackInBox from '../routes/center/stackcenteredinbox';
 
 import ClusterBasic from '../routes/cluster/basic';
+import ClusterList from '../routes/cluster/list';
 
 const App = () => (
 	<div id="app">
@@ -44,6 +45,7 @@ const App = () => (
 			<CenterStackInBox path="/center/stackcenteredinbox" />
 
 			<ClusterBasic path="/cluster/basic" />
+			<ClusterList path="/cluster/list" />
 		</Router>
 	</div>
 )
