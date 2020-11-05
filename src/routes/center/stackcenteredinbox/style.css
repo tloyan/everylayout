@@ -1,0 +1,41 @@
+/* BOX logic */
+.box {
+  padding: var(--s3);
+  border: var(--border-thick) solid;
+  outline: var(--border-thick) transparent;
+  outline-offset: calc(var(--border-thick) * -1);
+
+  filter: invert(100%);
+}
+
+/* easier visualisation */
+.box > * {
+  border: var(--border-thin) solid;
+}
+
+/* CENTER logic */
+.center {
+  box-sizing: content-box;
+  max-width: 40ch;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--s2);
+  padding-right: var(--s2);
+}
+
+
+/* easier visualisation */
+.stack {
+  border: var(--border-thin) solid;
+}
+
+/* easier visualisation */
+.stack > * {
+  border: var(--border-thin) solid;
+}
+
+
+/* STACK logic */
+.stack > * + * {
+  margin-top: var(--s1);
+}
