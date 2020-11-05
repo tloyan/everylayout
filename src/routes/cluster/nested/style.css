@@ -1,0 +1,46 @@
+.primarycluster {
+  --space: var(--s3);
+  overflow: hidden;
+}
+
+.primarycluster > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: calc(var(--space) / 2 * -1);
+}
+
+.primarycluster > * > * {
+  margin: calc(var(--space) / 2);
+}
+
+
+.secondarycluster {
+  --secondaryspace: var(--s-1);
+  overflow: hidden;
+}
+
+.secondarycluster > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin: calc(var(--secondaryspace) / 2 * -1)
+}
+
+.secondarycluster > * > * {
+  margin: calc(var(--secondaryspace) / 2);
+}
+
+
+/*
+  Only for better visualisatiion
+*/
+.primarycluster {
+  border: var(--border-thin) solid;
+  filter: invert(100%);
+}
+
+.primarycluster > * {
+  border: var(--border-thin) solid;
+  padding: var(--s-1);
+}
