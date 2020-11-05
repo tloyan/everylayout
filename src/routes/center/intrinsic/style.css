@@ -1,0 +1,36 @@
+/*
+  The css below is only purpose for a better visualisation about what's happening.
+  Do not consider this for the logic about components.
+*/
+.stack {
+  border: var(--border-thin) solid;
+  padding: var(--s1);
+  filter: invert(100%);
+}
+
+.stack > * {
+  border: var(--border-thin) solid;
+  padding: var(--s1);
+}
+
+/*
+  The css below is for stack layout
+*/
+.stack > * + * {
+  margin-top: var(--s2);
+}
+
+/* The css below is for center layout */
+.center {
+  /* ↓ Remove padding from the width calculation */
+  box-sizing: content-box;
+  /* ↓ The maximum width is the maximum measure */
+  max-width: 60ch;
+  /* ↓ Only affect horizontal margins */
+  margin-left: auto;
+  margin-right: auto;
+  /* ↓ Apply intrinsic center */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

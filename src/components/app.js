@@ -17,6 +17,7 @@ import BoxWithinStack from '../routes/box/withinstack';
 import BoxWithHeader from '../routes/box/withheader';
 
 import CenterBasic from '../routes/center/basic';
+import CenterIntrinsic from '../routes/center/intrinsic';
 
 const App = () => (
 	<div id="app">
@@ -36,6 +37,7 @@ const App = () => (
 			<BoxWithHeader path="/box/withheader" />
 
 			<CenterBasic path="/center/basic" />
+			<CenterIntrinsic path="/center/intrinsic" />
 
 		</Router>
 	</div>
