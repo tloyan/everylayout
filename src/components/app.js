@@ -20,6 +20,8 @@ import CenterBasic from '../routes/center/basic';
 import CenterIntrinsic from '../routes/center/intrinsic';
 import CenterStackInBox from '../routes/center/stackcenteredinbox';
 
+import ClusterBasic from '../routes/cluster/basic';
+
 const App = () => (
 	<div id="app">
 		<Router>
@@ -41,6 +43,7 @@ const App = () => (
 			<CenterIntrinsic path="/center/intrinsic" />
 			<CenterStackInBox path="/center/stackcenteredinbox" />
 
+			<ClusterBasic path="/cluster/basic" />
 		</Router>
 	</div>
 )
