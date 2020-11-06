@@ -25,6 +25,8 @@ import ClusterList from '../routes/cluster/list';
 import ClusterFirefox from '../routes/cluster/firefox';
 import ClusterNested from '../routes/cluster/nested';
 
+import SidebarMediaObject from '../routes/sidebar/mediaobject';
+
 const App = () => (
 	<div id="app">
 		<Router>
@@ -50,6 +52,8 @@ const App = () => (
 			<ClusterList path="/cluster/list" />
 			<ClusterFirefox path="/cluster/firefox" />
 			<ClusterNested path="/cluster/nested" />
+
+			<SidebarMediaObject path="/sidebar/mediaobject" />
 		</Router>
 	</div>
 )

@@ -1,0 +1,69 @@
+/*
+  SIDEBAR LOGIC
+*/
+.withsidebar {
+  /* ↓ Suppresses scrolling sometimes caused by the overflow */
+  overflow: hidden;
+}
+
+.withsidebar > * {
+  /* ↓ The space value; the first point on the modular scale */
+  --space: var(--s1);
+  /* ↓ Establish the flex context and allow wrapping */
+  display: flex;
+  flex-wrap: wrap;
+  /* ↓ Negate the margin to follow
+  (`* -1` makes the value negative) */
+  margin: calc(var(--space) / 2 * -1);
+  /* align-items: flex-start;   if you want sidebar don't take same horizontal space than second element */
+}
+
+.withsidebar > * > * {
+  /* ↓ Half margins meet to make the whole space value together */
+  margin: calc(var(--space) / 2);
+  /* ↓ Size of the sidebar, not always necesary */
+  flex-basis: 25rem;
+  /* ↓ Allow growing (needed for the vertical configuration) */
+  flex-grow: 1;
+}
+
+.withsidebar > * > :last-child {
+  /* ↓ Grow from nothing */
+  flex-basis: 0;
+  /* ↓ Ensure all the available space is taken */
+  flex-grow: 999;
+  /* ↓ The value at which the configuration changes between horizontal and vertical */
+  min-width: calc(50% - var(--space));
+}
+
+
+
+
+
+/*
+  NOT SIDEBAR LOGIC
+*/
+
+/* disable max-width for this layout */
+.withsidebar > * > * {
+  max-width: none;
+}
+
+/* Auto resize imaage */
+.withsidebar > * > * > * {
+  max-width: none;
+  width: 100%;
+  height: auto;
+}
+
+
+/*
+  juste for better visualisation
+*/
+.withsidebar {
+  filter: invert(100%);
+}
+
+.withsidebar > * > * {
+  border: var(--border-thin) solid;
+}
