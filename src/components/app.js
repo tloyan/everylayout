@@ -27,6 +27,7 @@ import ClusterNested from '../routes/cluster/nested';
 
 import SidebarMediaObject from '../routes/sidebar/mediaobject';
 import SidebarMediaObjectSwitched from '../routes/sidebar/mediaobjectswitched';
+import SidebarSearchWidget from '../routes/sidebar/searchwidget';
 
 const App = () => (
 	<div id="app">
@@ -56,6 +57,7 @@ const App = () => (
 
 			<SidebarMediaObject path="/sidebar/mediaobject" />
 			<SidebarMediaObjectSwitched path="/sidebar/mediaobjectswitched" />
+			<SidebarSearchWidget path="/sidebar/searchwidget" />
 		</Router>
 	</div>
 )

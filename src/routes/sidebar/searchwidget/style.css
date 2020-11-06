@@ -1,0 +1,46 @@
+/*
+  SIDEBAR LOGIC
+*/
+.withsidebar {
+  overflow: hidden;
+}
+
+.withsidebar > * {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.withsidebar > * > * {
+  flex-grow: 1;
+}
+
+.withsidebar > * > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 80%;
+}
+
+
+/*
+  NOT SIDEBAR LOGIC
+*/
+
+/* disable max-width for this layout */
+.withsidebar > * > * {
+  max-width: none;
+}
+
+.withsidebar > * {
+  max-width: none;
+}
+
+/*
+  juste for better visualisation
+*/
+.withsidebar {
+  border: var(--border-thin) solid;
+}
+
+/* .withsidebar > * > * {
+  border: var(--border-thin) solid;
+} */
