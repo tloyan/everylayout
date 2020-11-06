@@ -26,6 +26,7 @@ import ClusterFirefox from '../routes/cluster/firefox';
 import ClusterNested from '../routes/cluster/nested';
 
 import SidebarMediaObject from '../routes/sidebar/mediaobject';
+import SidebarMediaObjectSwitched from '../routes/sidebar/mediaobjectswitched';
 
 const App = () => (
 	<div id="app">
@@ -54,6 +55,7 @@ const App = () => (
 			<ClusterNested path="/cluster/nested" />
 
 			<SidebarMediaObject path="/sidebar/mediaobject" />
+			<SidebarMediaObjectSwitched path="/sidebar/mediaobjectswitched" />
 		</Router>
 	</div>
 )

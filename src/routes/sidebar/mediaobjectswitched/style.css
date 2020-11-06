@@ -1,0 +1,55 @@
+/*
+  SIDEBAR LOGIC
+*/
+.withsidebar {
+  overflow: hidden;
+}
+
+.withsidebar > * {
+  --space: var(--s1);
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--space) / 2 * -1)
+}
+
+.withsidebar > * > * {
+  margin: calc(var(--space) / 2);
+  flex-basis: 25rem;
+  flex-grow: 1;
+}
+
+.withsidebar > * > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(50% - var(--space));
+}
+
+
+
+/*
+  NOT SIDEBAR LOGIC
+*/
+
+/* disable max-width for this layout */
+.withsidebar > * > * {
+  max-width: none;
+}
+
+/* Auto resize imaage */
+.withsidebar > * > * > * {
+  max-width: none;
+  width: 100%;
+  height: auto;
+}
+
+
+/*
+  juste for better visualisation
+*/
+.withsidebar {
+  filter: invert(100%);
+}
+
+.withsidebar > * > * {
+  border: var(--border-thin) solid;
+}
