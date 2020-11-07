@@ -31,6 +31,8 @@ import SidebarSearchWidget from '../routes/sidebar/searchwidget';
 
 import SwitcherBasic from '../routes/switcher/basic';
 
+import CoverBasic from '../routes/cover/basic';
+
 const App = () => (
 	<div id="app">
 		<Router>
@@ -62,6 +64,8 @@ const App = () => (
 			<SidebarSearchWidget path="/sidebar/searchwidget" />
 
 			<SwitcherBasic path="/switcher/basic" />
+
+			<CoverBasic path="/cover/basic" />
 		</Router>
 	</div>
 )
