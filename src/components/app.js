@@ -29,6 +29,8 @@ import SidebarMediaObject from '../routes/sidebar/mediaobject';
 import SidebarMediaObjectSwitched from '../routes/sidebar/mediaobjectswitched';
 import SidebarSearchWidget from '../routes/sidebar/searchwidget';
 
+import SwitcherBasic from '../routes/switcher/basic';
+
 const App = () => (
 	<div id="app">
 		<Router>
@@ -58,6 +60,8 @@ const App = () => (
 			<SidebarMediaObject path="/sidebar/mediaobject" />
 			<SidebarMediaObjectSwitched path="/sidebar/mediaobjectswitched" />
 			<SidebarSearchWidget path="/sidebar/searchwidget" />
+
+			<SwitcherBasic path="/switcher/basic" />
 		</Router>
 	</div>
 )

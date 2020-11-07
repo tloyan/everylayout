@@ -1,0 +1,45 @@
+.switcher {
+  --threshold: 30rem;
+  --space: var(--s1);
+  overflow: hidden;
+}
+
+.switcher > * {
+  /* ↓ Establish the flex context and allow wrapping */
+  display: flex;
+  flex-wrap: wrap;
+  /* ↓ Negate the margin to follow (`* -1` makes the value negative) */
+  margin: calc(var(--space) / 2 * -1);
+}
+
+.switcher > * > * {
+  /* ↓ Allow growing, to take up available space */
+  flex-grow: 1;
+  /* ↓ Create the container-based breakpoint (returns a negative or large positive value */
+  flex-basis: calc((var(--threshold) - (100% - var(--space))) * 999);
+  /* ↓ Half margins meet to make the whole space value together */
+  margin: calc(var(--space) / 2);
+}
+
+.switcher > * > :nth-child(2) {
+  flex-grow: 2;
+}
+
+.switcher > * > :nth-last-child(n+5),
+.switcher > * > :nth-last-child(n+5) ~ * {
+  /* Switch to a vertical configuration if
+  there are more than 4 child elements */
+  flex-basis: 100%;
+}
+
+
+/* for better visualisation */
+.switcher {
+  filter: invert(100%);
+}
+
+.switcher > * > * {
+  border: var(--border-thin) solid;
+  padding: var(--s-1);
+  max-width: none;
+}
