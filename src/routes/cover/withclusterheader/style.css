@@ -1,0 +1,62 @@
+.cover {
+  display: flex;
+  flex-direction: column;
+  padding: var(--s1);
+  min-height: 100vh;
+  filter: invert(100%);
+}
+
+.cover > * {
+  margin-top: var(--s1);
+  margin-bottom: var(--s1);
+}
+
+.cover > :first-child:not(h1) {
+  margin-top: 0;
+}
+
+.cover > :last-child:not(h1) {
+  margin-bottom: 0;
+}
+
+.cover > h1 {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: var(--s3);
+}
+
+.cluster {
+  overflow: hidden;
+}
+
+.cluster > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: calc(var(--s2) / 2 * -1);
+}
+
+.clusternav {
+  overflow: hidden;
+}
+
+.clusternav > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: calc(var(--s2) / 2 * -1);
+  padding: var(--s1);
+}
+
+.cluster > * > *,
+.clusternav > * > * {
+  font-size: var(--s1);
+  margin: calc(var(--s2) / 2)
+}
+
+.cluster > * > div > :first-child:not(div) {
+  max-width: none;
+  width: 15rem;
+  height: auto;
+}

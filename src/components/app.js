@@ -32,6 +32,7 @@ import SidebarSearchWidget from '../routes/sidebar/searchwidget';
 import SwitcherBasic from '../routes/switcher/basic';
 
 import CoverBasic from '../routes/cover/basic';
+import CoverWithClusterHeader from '../routes/cover/withclusterheader';
 
 const App = () => (
 	<div id="app">
@@ -66,6 +67,7 @@ const App = () => (
 			<SwitcherBasic path="/switcher/basic" />
 
 			<CoverBasic path="/cover/basic" />
+			<CoverWithClusterHeader path="/cover/withclusterheader" />
 		</Router>
 	</div>
 )
