@@ -34,6 +34,8 @@ import SwitcherBasic from '../routes/switcher/basic';
 import CoverBasic from '../routes/cover/basic';
 import CoverWithClusterHeader from '../routes/cover/withclusterheader';
 
+import GridBasic from '../routes/grid/basic';
+
 const App = () => (
 	<div id="app">
 		<Router>
@@ -68,6 +70,8 @@ const App = () => (
 
 			<CoverBasic path="/cover/basic" />
 			<CoverWithClusterHeader path="/cover/withclusterheader" />
+
+			<GridBasic path="/grid/basic" />
 		</Router>
 	</div>
 )
