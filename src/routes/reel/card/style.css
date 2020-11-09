@@ -1,0 +1,105 @@
+.reel {
+  /* ↓ Custom properties for ease of adjustment */
+  --space: 1rem;
+  --color-light: #fff;
+  --color-dark: #000;
+  --reel-height: auto;
+  --item-width: 25ch;
+  display: flex;
+  height: var(--reel-height);
+  /* ↓ Overflow */
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* ↓ For Firefox */
+  scrollbar-color: var(--color-dark) var(--color-light);
+
+  filter: invert(100%);
+}
+
+.reel::-webkit-scrollbar {
+  /* ↓ Instead, you could make the scrollbar height a variable too. This is left as an exercise (be mindful of the linear-gradient!) */
+  height: 1rem;
+}
+
+.reel::-webkit-scrollbar-track {
+  background-color: var(--color-light);
+}
+
+.reel::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark);
+  /* ↓ Linear gradient ‘insets’ the white thumb within the black bar */
+  background-image: linear-gradient(var(--color-dark) 0, var(--color-dark) 0.25rem);
+}
+
+.reel > * {
+  /* ↓ Just a `width` wouldn’t work because `flex-shrink: 1` (default) still applies */
+  flex: 0 0 var(--item-width);
+}
+
+
+.reel > * + * {
+  margin-left: var(--space);
+}
+
+.reel.overflowing {
+  /* ↓ Only apply if there is a scrollbar (see the JavaScript) */
+  padding-bottom: var(--space);
+}
+
+
+
+
+
+
+
+.box {
+  padding: var(--s0);
+  border: var(--border-thin) solid;
+  outline: var(--border-thin) transparent;
+  outline-offset: calc(var(--border-thin) * -1);
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+.stack > * + * {
+  margin-top: var(--s1);
+}
+
+.frame {
+  --n: 9;
+  --d: 16;
+  position: relative;
+  padding-bottom: calc(var(--n) / var(--d) * 100%);
+}
+
+.frame > * {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame > img,
+.frame > video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/*
+  This is for better visualisation
+*/
+.reel {
+  border: var(--border-thin) solid;
+  filter: invert(100%);
+}
+
+.titlecard {
+  font-size: var(--s1);
+}
