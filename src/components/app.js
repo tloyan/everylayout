@@ -35,6 +35,7 @@ import CoverBasic from '../routes/cover/basic';
 import CoverWithClusterHeader from '../routes/cover/withclusterheader';
 
 import GridBasic from '../routes/grid/basic';
+import GridWithCard from '../routes/grid/withcard';
 
 const App = () => (
 	<div id="app">
@@ -72,6 +73,7 @@ const App = () => (
 			<CoverWithClusterHeader path="/cover/withclusterheader" />
 
 			<GridBasic path="/grid/basic" />
+			<GridWithCard path="/grid/withcard" />
 		</Router>
 	</div>
 )

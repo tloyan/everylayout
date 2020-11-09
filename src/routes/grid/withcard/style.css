@@ -1,0 +1,47 @@
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+  --minimum: 30ch;
+}
+
+@supports (width: min(var(--minimum), 100%)) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--minimum), 100%), 1fr));
+  }
+}
+
+.box {
+  padding: var(--s0);
+  border: var(--border-thin) solid;
+  outline: var(--border-thin) transparent;
+  outline-offset: calc(var(--border-thin) * -1);
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+.box * {
+  color: inherit;
+}
+
+.stack > * + * {
+  margin-top: var(--s1);
+}
+
+.imagewrapper > img {
+  max-width: none;
+  width: 100%;
+  height: auto;
+}
+
+/* juste for better visualisation */
+.grid {
+  filter: invert(100%);
+}
+
+.grid > * {
+  border: var(--border-thin) solid;
+}
+
+.titlecard {
+  font-size: var(--s1);
+}
