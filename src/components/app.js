@@ -43,6 +43,8 @@ import FrameWithCard from '../routes/frame/withcard';
 import ReelCard from '../routes/reel/card';
 import ReelImage from '../routes/reel/image';
 
+import ImposterBasic from '../routes/imposter/basic';
+
 const App = () => (
 	<div id="app">
 		<Router>
@@ -86,6 +88,8 @@ const App = () => (
 
 			<ReelCard path="/reel/card" />
 			<ReelImage path="/reel/image" />
+
+			<ImposterBasic path="/imposter/basic" />
 		</Router>
 	</div>
 )
