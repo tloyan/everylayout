@@ -38,6 +38,7 @@ import GridBasic from '../routes/grid/basic';
 import GridWithCard from '../routes/grid/withcard';
 
 import FrameBasic from '../routes/frame/basic';
+import FrameWithCard from '../routes/frame/withcard';
 
 const App = () => (
 	<div id="app">
@@ -78,6 +79,7 @@ const App = () => (
 			<GridWithCard path="/grid/withcard" />
 
 			<FrameBasic path="/frame/basic" />
+			<FrameWithCard path="/frame/withcard" />
 		</Router>
 	</div>
 )

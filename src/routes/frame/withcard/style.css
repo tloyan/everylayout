@@ -1,0 +1,63 @@
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+  --minimum: 30ch;
+}
+
+@supports (width: min(var(--minimum, 100%))) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--minimum), 100%), 1fr));
+  }
+}
+
+.box {
+  padding: var(--s0);
+  border: var(--border-thin) solid;
+  outline: var(--border-thin) transparent;
+  outline-offset: calc(var(--border-thin) * -1);
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+.stack > * + * {
+  margin-top: var(--s1);
+}
+
+.frame {
+  --n: 9;
+  --d: 16;
+  position: relative;
+  padding-bottom: calc(var(--n) / var(--d) * 100%);
+}
+
+.frame > * {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame > img,
+.frame > video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/*
+  This is for better visualisation
+*/
+.grid {
+  border: var(--border-thin) solid;
+  filter: invert(100%);
+}
+
+.titlecard {
+  font-size: var(--s1);
+}
